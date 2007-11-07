@@ -1,0 +1,19 @@
+package config
+
+$default_host = "codd";
+
+$cfg{'codd'} = {
+     fqdn => "uwcs.co.uk",
+     method => "scpb",
+     options => "-l 125",
+     incoming => "/home/lamby/public_html/htdocs/debian/",
+     dinstall_runs => 1,
+};
+$cfg{'rimu'}{postupload}{'changes'} = "
+     echo 'cd /home/lamby/public_html/htdocs/debian ;
+     dpkg-scanpackages . /dev/null >Packages || true ;
+     dpkg-scansources . /dev/null >Sources || true ;
+     gzip -9 -c Packages >Packages.gz ;
+     gzip -9 -c Sources >Sources.gz ;
+     chmod 644 * ' | ssh uwcs.co.uk  2>/dev/null ;
+     echo 'Package archive created!'";

@@ -1,0 +1,20 @@
+Package: git-core
+Architecture: any
+Depends: ${shlibs:Depends}, perl-modules, liberror-perl,
+   libdigest-sha1-perl, cpio
+Recommends: git-doc, patch, less, rsync, curl, ssh-client
+Suggests: git-arch, git-cvs, git-svn, git-email,
+   git-daemon-run, git-gui, gitk, gitweb
+Replaces: cogito (<< 0.16rc2-0), git-completion
+Conflicts: git (<< 4.3.20-11), qgit (<< 1.5.5), git-completion
+Provides: git-completion
+Description: fast, scalable, distributed revision control system
+ <snip description>
+
+Package: git-doc
+Section: doc
+Architecture: all
+Suggests: git-core, git-arch, git-cvs, git-svn, git-email, gitk
+Description: fast, scalable, distributed revision control
+    system (documentation)
+ <snip description>

@@ -1,0 +1,28 @@
+git-core (1:1.5.3.4-1) unstable; urgency=low
+
+  * new upstream point release (closes: #445188).
+
+ -- Gerrit Pape <pape@smarden.org>  Thu, 04 Oct 2007 08:27:01 +0000
+
+git-core (1:1.5.3.3-1) unstable; urgency=low
+
+  * new upstream point release.
+
+ -- Gerrit Pape <pape@smarden.org>  Sun, 30 Sep 2007 09:25:06 +0000
+
+git-core (1:1.5.3.2-1) unstable; urgency=low
+
+  * new upstream point release.
+    * git-svn: fix "Malformed network data" with svn:// servers (closes:
+      #430091, #436142).
+    * git-commit: Allow partial commit of file removal (closes: #437817).
+    * git-gui: lib/index.tcl: handle files with % in the filename properly
+      (closes: #441167).
+    * git-clone: improve error message if curl program is missing or not
+      executable (closes: #440976).
+  * debian/git-daemon-run.postinst: use 'sv -v term git-daemon' instead of
+    'sv restart git-daemon' to restart git-daemon service if it was running.
+  * debian/control: git-core: no longer Suggests: cogito, which was removed.
+  * debian/diff/genindex.diff: apply and remove.
+  * debian/gitweb.conf: comment out $home_link, and set to gitweb.cgi's
+    default (thx Ansgar Burchardt for the patch, closes: 441694).
