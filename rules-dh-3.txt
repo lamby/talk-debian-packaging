@@ -1,0 +1,5 @@
+clean:
+        dh_testdir
+        dh_clean
+        rm -f build
+        -$(MAKE) -i distclean

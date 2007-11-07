@@ -1,0 +1,12 @@
+install: build
+     dh_clean
+     dh_installdirs
+     $(MAKE) prefix=$(CURDIR)/debian/$(package)/usr \
+           mandir=$(CURDIR)/debian/$(package)/usr/share/man \
+           infodir=$(CURDIR)/debian/$(package)/usr/share/info \
+            install
+
+build:
+     ./configure --prefix=/usr
+     $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)"
+     touch build

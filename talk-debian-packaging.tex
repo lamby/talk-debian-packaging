@@ -180,9 +180,67 @@
     \frame {
         \frametitle{\lstinline!debian/rules!}
         \begin{itemize}
+            \item `Just' a Makefile
+            \item Targets specified in Debian Policy manual
+            \item Flexibility in approaches
+            \begin{itemize}
+                \item Building packages by hand
+                \item Debhelper
+                \item CDBS
+            \end{itemize}
         \end{itemize}
     }
 
+    \frame {
+        \frametitle{\lstinline!debian/rules! by hand}
+        \begin{scriptsize}
+            \lstinputlisting{rules-byhand-1.txt}
+        \end{scriptsize}
+    }
+
+    \frame {
+        \begin{scriptsize}
+            \lstinputlisting{rules-byhand-2.txt}
+        \end{scriptsize}
+    }
+
+    \frame {
+        \begin{scriptsize}
+            \lstinputlisting{rules-byhand-3.txt}
+        \end{scriptsize}
+    }
+
+    \frame {
+        \begin{tiny}
+            \lstinputlisting{rules-byhand-4.txt}
+        \end{tiny}
+    }
+
+    %
+    \frame {
+        \frametitle{\lstinline!debian/rules! using Debhelper}
+        \begin{scriptsize}
+            \lstinputlisting{rules-dh-1.txt}
+        \end{scriptsize}
+    }
+
+    \frame {
+        \begin{scriptsize}
+            \lstinputlisting{rules-dh-2.txt}
+        \end{scriptsize}
+    }
+
+    \frame {
+        \begin{scriptsize}
+            \lstinputlisting{rules-dh-3.txt}
+        \end{scriptsize}
+    }
+
+    \frame {
+        \begin{scriptsize}
+            \lstinputlisting{rules-dh-4.txt}
+        \end{scriptsize}
+    }
     \subsection{Building our first package}
     \frame {
         \frametitle{Building our first package}
